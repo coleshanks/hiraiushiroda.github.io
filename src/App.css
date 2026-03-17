@@ -1,0 +1,22 @@
+.container {
+  font-family: Arial, sans-serif;
+  max-width: 680px;
+  margin: 40px auto;
+  padding: 0 16px;
+  line-height: 1.6;
+}
+
+img {
+  width: 180px;
+  border-radius: 12px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin-bottom: 8px;
+}
+
+ul {
+  padding-left: 20px;
+}
