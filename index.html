@@ -1,14 +1,64 @@
+<!--index.html の役割は3つです。
+
+ブラウザに「これはHTMLです」と伝える
+ページの基本情報（文字コード、タイトルなど）を渡す
+Reactを表示する空箱（root）を置く-->
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hirai's Website</title>
-    <script type="module" crossorigin src="/assets/index-jXaZmWtg.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-C6AdxVzO.css">
+    <script type="module" crossorigin src="/assets/index-DjqOHNPT.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BiXsejH0.css">
   </head>
   <body>
     <div id="root"></div>
   </body>
 </html>
+
+<!--<!doctype html>
+これはHTML5ですよ、という宣言。
+
+<html lang="ja">
+ページ全体の開始。lang="ja" は日本語ページという意味。
+
+<head> ... </head>
+画面に直接見えない設定を書く場所（ページ情報）。
+
+<meta charset="UTF-8" />
+文字化け防止。日本語を正しく表示するために重要。
+
+<meta name="viewport" ... />
+スマホ表示の幅調整。レスポンシブに必須。
+
+<title>...</title>
+ブラウザタブに表示されるタイトル。
+
+<body> ... </body>
+実際に表示される内容の領域。
+
+<div id="root"></div>
+Reactアプリを差し込む空の箱。超重要。
+
+<script type="module" src="/src/main.jsx"></script>
+main.jsx を読み込んでReactを起動する。
+
+⭐︎React学習中の運用ルール
+index.html は基本ほぼ触らない
+よく触るのは App.jsx と App.css
+root は消さない・名前変えない
+script src="/src/main.jsx" も消さない
+
+⭐︎初心者がやりがちなミス
+id="root" を消す
+→ Reactが表示されない
+
+script 行を消す
+→ アプリが起動しない
+
+charset を変える/消す
+→ 日本語が崩れることがある
+ -->
