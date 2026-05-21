@@ -17,7 +17,7 @@ function App() {
         <p>age:22</p>
         <p>from:Japan</p>
         <p>currently:Junior web developer</p>
-        <p>Email:hiraiu.jp@gmail.com</p>
+	<a href="mailto:hiraiu.jp@gmail.com">Email:hiraiu.jp@gmail.com</a>
         <a
           href="https://github.com/hiraiushiroda"
           target="_blank"
