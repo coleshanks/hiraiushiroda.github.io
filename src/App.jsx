@@ -10,19 +10,18 @@ function App() {
       <h1>About me</h1>
 
       {/* TODO: write something about yourself */}
-      <h2>Hi! I’m Hirai Ushiroda.</h2>
+      <h2>Hi! Welcome to my page ☆ </h2>
       <div>
         <h4>Bio</h4>
-        <p>name:Hirai Ushiroda 後田ひらい</p>
-        <p>age:22</p>
-        <p>from:Japan</p>
-        <p>currently:Junior web developer</p>
-        <p>Email:hiraiu.jp@gmail.com</p>
-        <a
+         <p>age:23</p>
+         <p>from:Japan</p>
+         <p>currently:Junior web developer</p>
+         <p>Email:hiraiu.jp@gmail.com</p>
+         <a
           href="https://github.com/hiraiushiroda"
           target="_blank"
           rel="noopener noreferrer"
-        >
+         >
          GitHub
         </a>
          {/*リンクの追加はaタグ　href:Hypertext Referenceの略で、「このリンクが参照するURL」を指定する属性
@@ -40,8 +39,7 @@ function App() {
         <p> Hiroshima Motomachi High School </p>
       </div>
 
-      <ul>
-        {/* TODO: update these list items to reflect what you're learning / working on */}
+       <ul>
         <li>🌱 I'm currently learning React, JavaScript, and CSS.</li>
         <li>🤔 I need help with learning React.</li>
         <li>🤍 Fun fact: mochi lover</li>
