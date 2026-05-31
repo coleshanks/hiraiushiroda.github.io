@@ -1,28 +1,39 @@
 import './App.css'
 
 function App() {
+  const myProfile = {
+    age: 23,
+    from: "Japan",
+    currently: "Junior web developer",
+    email: "hiraiu.jp@gmail.com",
+    githubUrl: "https://github.com/hiraiushiroda",
+    githubLabel: "GitHub",
+    background: [
+      "Hiroshima University, School of Integrated Arts and Sciences",
+      "Hiroshima Motomachi High School"
+    ],
+    learning: "React, JavaScript, and CSS",
+    helpWith: "learning React",
+    funFact: "mochi lover",
+  }
+ 
   return (
     <div className="container">
-      {/* TODO: swap this image for your own photo */}
       <img src="/assets/img/253464256.png" alt="Black Kitty" />
-
-      {/* TODO: update your name */}
       <h1>About me</h1>
-
-      {/* TODO: write something about yourself */}
-      <h2>Hi! Welcome to my page ☆ </h2>
+      <h2>Hi! Welcome to my page ☆</h2>
       <div>
         <h4>Bio</h4>
-         <p>age:23</p>
-         <p>from:Japan</p>
-         <p>currently:Junior web developer</p>
-         <a href="mailto:hiraiu.jp@gmail.com">Email:hiraiu.jp@gmail.com</a>
+         <p>age:{myProfile.age}</p>
+         <p>from:{myProfile.from}</p>
+         <p>currently:{myProfile.currently}</p>
+         <a href={`mailto:${myProfile.email}`}>Email:{myProfile.email}</a>
         <a
-          href="https://github.com/hiraiushiroda"
+          href={myProfile.githubUrl}
           target="_blank"
           rel="noopener noreferrer"
          >
-         GitHub
+         {myProfile.githubLabel}
         </a>
          {/*リンクの追加はaタグ　href:Hypertext Referenceの略で、「このリンクが参照するURL」を指定する属性
           target="_blank": 新しいタブで開く指定
@@ -35,14 +46,15 @@ function App() {
       </div>
       <div>
         <h4>Background</h4>
-        <p> Hiroshima University, School of Integrated Arts and Sciences </p>
-        <p> Hiroshima Motomachi High School </p>
+        {myProfile.background.map((item) => (
+          <p key={item}>{item}</p>
+        ))}
       </div>
 
        <ul>
-        <li>🌱 I'm currently learning React, JavaScript, and CSS.</li>
-        <li>🤔 I need help with learning React.</li>
-        <li>🤍 Fun fact: mochi lover</li>
+        <li>🌱 I'm currently learning {myProfile.learning}.</li>
+        <li>🤔 I need help with {myProfile.helpWith}.</li>
+        <li>🤍 Fun fact: {myProfile.funFact}</li>
       </ul>
     </div>
   )
