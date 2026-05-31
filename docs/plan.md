@@ -41,7 +41,7 @@
 - ゴール:
   - 「ReactDOMがAppを描画している」と説明できる
 
-### Day 2: JavaScript超基礎1
+### 🩵 Day 2: JavaScript超基礎1
 - やること:
   - `const`, `let` の使い分け
   - 配列 `[]` とオブジェクト `{}` の練習

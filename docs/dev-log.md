@@ -40,3 +40,59 @@
 - 詰まりの原因:実際にこれを使ったことがないから
 - 明日の最初の1手:今回の復習から開始
 - 学習時間:4.5h
+
+## 2026-05-31
+- 今日の目的: Day 2 JavaScript超基礎1を達成
+- やったこと: 年齢を更新　ページが白画面になったので修正　githubの設定が原因
+  データは const myProfile = {...} に集約し、表示は {myProfile.xxx} で参照する。　
+  **htmlをreact使ってjsxの書き方に変更しました。**
+- 難しかったこと: githubのページの設定方法がいまいちわからなかった　codexに聞いたら解決したけど 
+  **mapの書き方が難しい**
+- 覚えること: 白画面でも「サーバが落ちた」とは限らない。まず githubのActions と Pages 設定を確認
+-note:
+ **const と let の使い分け**
+ const: 再代入しない値に使う（基本はこれ）　絶対に変わらない値
+ let: あとで値を変える予定があるときに使う　変わる可能性のあるもの　年齢など
+ *const の「中身変更」と「再代入」は別 オブジェクト自体の再代入はNGでも、プロパティ変更は可能　（profile = {} をしたいなら let を使う。）
+ ```js
+ const profile = { name: "Hirai", age: 23 }
+ profile.age = 24       // OK（中身変更）
+ /* profile = {} */     // NG（再代入）
+ ```
+ **⭐︎配列 [] とオブジェクト {}**
+ 配列: 順番つきのデータ
+ オブジェクト: 名前付きのデータ（key: value）
+ ```js
+ const hobbies = ["coding", "mochi", "cat"]  // 配列
+ const profile = {                           // オブジェクト
+  name: "Hirai",
+  age: 23,
+  from: "Japan"
+ }
+ ```
+ **⭐︎console.log(...) は画面に表示する命令じゃない!**
+ - `console.log` = 「メモ帳に書く」  
+ - JSX（`<p>...</p>`） = 「画面に貼る」
+ 流れはこう:
+ 1. Reactが `App.jsx` を読む  
+ 2. `console.log(...)` は裏側のログ欄に出す  
+ 3. `return (...)` の中身だけがページに見える
+ だから、ページに出したいときは→
+ ```jsx
+ <p>{myProfile.age}</p>
+ <p>{myProfile.from}</p>
+ ```
+ - `js`: JavaScriptだけ。HTMLタグはそのまま書けない  
+ - `jsx`: JavaScript + HTMLっぽいタグを書ける（React用）
+ - `md`: 表示用テキスト。コードは ```js ... ``` みたいに囲んで貼る
+ - `css`: 見た目専用。`color`, `margin` などを書く
+ - `html`: ページの骨組みを直接書く
+ 例:
+ - `js` で画面表示したい → `console.log` か、DOM操作が必要
+ - `jsx` で画面表示したい → `return (<p>...</p>)` に書けば見える
+
+ **⭐︎Reactは App() の中で、タグなど画面に出すJSXは return (...) の中にかく！**
+ - `console.log` は画面に出ない。`Console` に出る。 
+ - 画面に出す内容は `return (...)` の中に書く。  
+ - JSXは `return` 内で **1つの親要素** にまとめる。  
+ - 追加要素（`<p>` など）は親要素（今は `<div className="container">`）の中に入れる。  
