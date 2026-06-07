@@ -65,11 +65,11 @@ body {
 
 /*#root Reactを描画する領域の大きさ・配置*/
 #root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
+  width: 100%;
+  min-height: 100svh;
+  display:flex;
   text-align: center;
-  border-inline: 1px solid var(--border);
+  border-inline: none;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
